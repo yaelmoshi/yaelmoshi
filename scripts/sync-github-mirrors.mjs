@@ -6,14 +6,13 @@ import { join } from "node:path";
 import { spawn } from "node:child_process";
 
 const FORGEJO_BASE_URL = process.env.FORGEJO_BASE_URL ?? "https://git.m0sh1.cc";
-const FORGEJO_OWNER = process.env.FORGEJO_OWNER ?? "m0sh1";
+const FORGEJO_OWNER = process.env.FORGEJO_OWNER ?? "isityael";
 const GITHUB_OWNER = process.env.GITHUB_OWNER ?? "isityael";
 const GITHUB_PUSH_TOKEN = process.env.GITHUB_PUSH_TOKEN ?? process.env.GITHUB_TOKEN;
 
 const MIRRORS = [
-  ["yaelmoshi", ["main"], "isityael"],
+  ["isityael", ["main"], "isityael"],
   ["helm-charts", ["main"]],
-  ["karakeep", ["main"]],
   ["proxmox-csi-plugin", ["sm-moshi/main"]],
   ["netzbremse", ["main"]],
   ["harbor-helm", ["sm-moshi/main"]],
