@@ -11,7 +11,7 @@ clone:
 
 steps:
   - name: sync-github-mirrors
-    image: dhi.io/node:26.2.0-alpine3.23-dev@sha256:88d721c72f82cc1522b4900750bdc7cc7191e73d5b9b5343d8e970ef4a3cf5d1
+    image: dhi.io/node:26.5.0-alpine3.23-dev@sha256:8bee4f8e570fd6496cea41f1197b3d62079c490fe70b41d08e722f8698431db6
     environment:
       GITHUB_PUSH_TOKEN:
         from_secret: github_push_token
