@@ -16,7 +16,7 @@ const MIRRORS = [
   ["proxmox-csi-plugin", ["sm-moshi/main"]],
   ["netzbremse", ["main"]],
   ["harbor-helm", ["sm-moshi/main"]],
-  ["wakapi", ["master"]],
+  ["wakapi-dhi", ["master"]],
   ["csi-driver-nfs", ["sm-moshi/dhi-hardening"]],
   ["apple-mail-mcp", ["main"]],
   ["chart-version-guard", ["main"]],
