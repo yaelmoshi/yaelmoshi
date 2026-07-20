@@ -35,7 +35,6 @@ topics, and brain farts about technology, identity, and life.
 Recent posts:
 
 <!-- recent-writing:start -->
-
 - [I Tried Everything Except Being Myself](https://yael.m0sh1.cc/i-tried-everything-except-being-myself/) - 26 May 2026
 - [I Became Very Good at Functioning](https://yael.m0sh1.cc/i-became-very-good-at-functioning/) - 07 May 2026
 <!-- recent-writing:end -->

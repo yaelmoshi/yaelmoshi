@@ -19,7 +19,7 @@ const MIRRORS = [
   ["netzbremse", ["main"]],
   ["harbor-helm", ["sm-moshi/main"]],
   ["wakapi-dhi", ["master"]],
-  ["csi-driver-nfs", ["sm-moshi/dhi-hardening"]],
+  ["csi-driver-nfs", ["isityael/dhi-hardening"]],
   ["apple-mail-mcp", ["main"]],
   ["chart-version-guard", ["main"]],
   ["harbor", ["main", "progressed"]],
