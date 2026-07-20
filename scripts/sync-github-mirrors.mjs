@@ -7,6 +7,8 @@ import { spawn } from "node:child_process";
 
 const FORGEJO_BASE_URL = process.env.FORGEJO_BASE_URL ?? "https://git.m0sh1.cc";
 const FORGEJO_OWNER = process.env.FORGEJO_OWNER ?? "isityael";
+const FORGEJO_PUSH_TOKEN = process.env.FORGEJO_PUSH_TOKEN;
+const FORGEJO_PUSH_USER = process.env.FORGEJO_PUSH_USER ?? "m0sh1";
 const GITHUB_OWNER = process.env.GITHUB_OWNER ?? "isityael";
 const GITHUB_PUSH_TOKEN = process.env.GITHUB_PUSH_TOKEN ?? process.env.GITHUB_TOKEN;
 
@@ -28,6 +30,9 @@ const MIRRORS = [
 
 if (!GITHUB_PUSH_TOKEN) {
   throw new Error("GITHUB_PUSH_TOKEN or GITHUB_TOKEN must be set");
+}
+if (!FORGEJO_PUSH_TOKEN) {
+  throw new Error("FORGEJO_PUSH_TOKEN must be set");
 }
 
 function run(command, args, options = {}) {
@@ -107,7 +112,7 @@ async function mirrorBranch(repo, branch, githubRepo = repo) {
 const netrcPath = join(homedir(), ".netrc");
 await writeFile(
   netrcPath,
-  `machine github.com\n  login x-access-token\n  password ${GITHUB_PUSH_TOKEN}\n`,
+  `machine git.m0sh1.cc\n  login ${FORGEJO_PUSH_USER}\n  password ${FORGEJO_PUSH_TOKEN}\nmachine github.com\n  login x-access-token\n  password ${GITHUB_PUSH_TOKEN}\n`,
   { mode: 0o600 },
 );
 await chmod(netrcPath, 0o600);
