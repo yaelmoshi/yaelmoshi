@@ -13,13 +13,13 @@ clone:
 
 steps:
   - name: update-recent-writing
-    image: dhi.io/node:26.2.0-alpine3.23-dev@sha256:88d721c72f82cc1522b4900750bdc7cc7191e73d5b9b5343d8e970ef4a3cf5d1
+    image: dhi.io/node:26.7.0-alpine3.23-dev@sha256:67d3b0c667c7fa5a753b335464e937c40cdd036c7b68a87c375048f3709d7b93
     commands:
       - node --test scripts/update-recent-writing.test.mjs
       - node scripts/update-recent-writing.mjs
 
   - name: push-readme
-    image: dhi.io/node:26.2.0-alpine3.23-dev@sha256:88d721c72f82cc1522b4900750bdc7cc7191e73d5b9b5343d8e970ef4a3cf5d1
+    image: dhi.io/node:26.7.0-alpine3.23-dev@sha256:67d3b0c667c7fa5a753b335464e937c40cdd036c7b68a87c375048f3709d7b93
     environment:
       GIT_PUSH_TOKEN:
         from_secret: forgejo_profile_push_token
