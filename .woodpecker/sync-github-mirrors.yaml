@@ -1,6 +1,8 @@
 when:
   - event: manual
   - event: cron
+  - event: push
+    branch: main
 
 clone:
   git:
