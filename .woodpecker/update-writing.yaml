@@ -45,3 +45,6 @@ steps:
           password ${GIT_PUSH_TOKEN}
         EOF
       - git push origin HEAD:main
+    when:
+      - event: manual
+      - event: cron
